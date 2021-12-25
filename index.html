@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Border-radius Previewer</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -21,24 +23,27 @@
       </p>
     </div>
 
-    <!-- GET VALUE OF BORDER RADIUS -->
-    <div class="border-radius-field">
-      <input type="text" class="input-value-border-radius" />
+    <!-- BOX -->
+    <div class="main-box">
+      <div class="border-radius-field" id="top-left">
+        <input type="text" class="input-value-border-radius" />
+      </div>
+      <div class="border-radius-field" id="top-right">
+        <input type="text" class="input-value-border-radius" />
+      </div>
+      <div class="border-radius-field" id="bottom-left">
+        <input type="text" class="input-value-border-radius" />
+      </div>
+      <div class="border-radius-field" id="bottom-right">
+        <input type="text" class="input-value-border-radius" />
+      </div>
     </div>
-    <div class="border-radius-field">
-      <input type="text" class="input-value-border-radius" />
-    </div>
-    <div class="border-radius-field">
-      <input type="text" class="input-value-border-radius" />
-    </div>
-    <div class="border-radius-field">
-      <input type="text" class="input-value-border-radius" />
+
+    <div class="code-container">
+      <p class="code-text">CSS:</p>
     </div>
   </body>
 
-  <!-- BOX -->
-  <div class="main-box">border-radius:</div>
-
-  <footer class="credits">Developed by Roberta Quiles</footer>
+  <footer class="credits"><p>Developed by Roberta Quiles</p></footer>
   <script src="script.js"></script>
 </html>
