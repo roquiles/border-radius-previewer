@@ -25,5 +25,22 @@ function changeBorderRadius() {
 
   if (this.value >= 0 && this.value <= 100) {
     box.style[this.id] = valor;
+
+    // SHOW THE RESULTING CSS
+    cssStyle.value = `border-radius: ${
+      box.style.borderTopLeftRadius ? box.style.borderTopLeftRadius : 0
+    }  ${
+      box.style.borderTopRightRadius ? box.style.borderTopRightRadius : 0
+    }  ${
+      box.style.borderBottomRightRadius ? box.style.borderBottomRightRadius : 0
+    }  ${
+      box.style.borderBottomLeftRadius ? box.style.borderBottomLeftRadius : 0
+    }`;
   }
+}
+
+// COPY TO CLIPBOARD
+function copyText() {
+  cssStyle.select();
+  navigator.clipboard.writeText(cssStyle.value);
 }
