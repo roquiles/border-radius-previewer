@@ -41,7 +41,10 @@ input:focus {
 
 .main-box {
   position: relative;
-  border-radius: 10%;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  border-top-right-radius: 0%;
+  border-top-left-radius: 0%;
   width: 400px;
   height: 350px;
   margin: auto;
