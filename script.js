@@ -13,6 +13,7 @@ const borderBottomRightRadius = document.getElementById(
 const box = document.querySelector(".main-box");
 
 const cssStyle = document.querySelector(".code-text");
+const btnCopy = document.querySelector(".button");
 
 // CHANGING BORDER RADIUS
 borderTopLeftRadius.addEventListener("change", changeBorderRadius);
@@ -37,6 +38,8 @@ function changeBorderRadius() {
       box.style.borderBottomLeftRadius ? box.style.borderBottomLeftRadius : 0
     }`;
   }
+
+  btnCopy.style.opacity = "100%";
 }
 
 // COPY TO CLIPBOARD
