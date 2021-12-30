@@ -81,6 +81,7 @@ header {
   border: none;
   border-radius: 10%;
   outline: none;
+  opacity: 0;
 }
 
 .button:hover {
@@ -94,6 +95,13 @@ header {
   bottom: 0;
   width: 100%;
   margin-bottom: 50px;
+}
+
+@media (max-height: 800px) {
+  .credits {
+    position: static;
+    margin-top: 3em;
+  }
 }
 
 #top-left {
