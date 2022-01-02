@@ -12,7 +12,7 @@ const borderBottomRightRadius = document.getElementById(
 
 const box = document.querySelector(".main-box");
 
-const cssStyle = document.querySelector(".code-text");
+const generatedCss = document.querySelector(".code-text");
 const btnCopy = document.querySelector(".button");
 
 // CHANGING BORDER RADIUS
@@ -22,21 +22,17 @@ borderBottomLeftRadius.addEventListener("change", changeBorderRadius);
 borderBottomRightRadius.addEventListener("change", changeBorderRadius);
 
 function changeBorderRadius() {
-  let valor = this.value + "%";
+  let value = this.value + "%";
 
   if (this.value >= 0 && this.value <= 100) {
-    box.style[this.id] = valor;
+    box.style[this.id] = value;
 
     // SHOW THE RESULTING CSS
-    cssStyle.value = `border-radius: ${
-      box.style.borderTopLeftRadius ? box.style.borderTopLeftRadius : 0
-    }  ${
-      box.style.borderTopRightRadius ? box.style.borderTopRightRadius : 0
-    }  ${
-      box.style.borderBottomRightRadius ? box.style.borderBottomRightRadius : 0
-    }  ${
-      box.style.borderBottomLeftRadius ? box.style.borderBottomLeftRadius : 0
-    }`;
+    generatedCss.value = `border-radius: ${
+      box.style.borderTopLeftRadius || 0
+    }  ${box.style.borderTopRightRadius || 0}  ${
+      box.style.borderBottomRightRadius || 0
+    }  ${box.style.borderBottomLeftRadius || 0}`;
   }
 
   btnCopy.style.opacity = "100%";
@@ -44,6 +40,6 @@ function changeBorderRadius() {
 
 // COPY TO CLIPBOARD
 function copyText() {
-  cssStyle.select();
+  generatedCss.select();
   navigator.clipboard.writeText(cssStyle.value);
 }
