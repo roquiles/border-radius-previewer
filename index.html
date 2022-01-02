@@ -26,21 +26,50 @@
     <!-- BOX -->
     <div class="main-box">
       <div class="border-radius-field" id="top-left">
-        <input type="text" class="input-value-border-radius" />
+        <input
+          type="text"
+          class="input-value-border-radius"
+          maxlength="3"
+          id="border-top-left-radius"
+          placeholder="%"
+          onchange="changeBorderRadius()"
+        />
       </div>
       <div class="border-radius-field" id="top-right">
-        <input type="text" class="input-value-border-radius" />
+        <input
+          type="text"
+          class="input-value-border-radius"
+          maxlength="3"
+          id="border-top-right-radius"
+          placeholder="%"
+          onchange="changeBorderRadius()"
+        />
       </div>
       <div class="border-radius-field" id="bottom-left">
-        <input type="text" class="input-value-border-radius" />
+        <input
+          type="text"
+          class="input-value-border-radius"
+          maxlength="3"
+          id="border-bottom-left-radius"
+          placeholder="%"
+          onchange="changeBorderRadius()"
+        />
       </div>
       <div class="border-radius-field" id="bottom-right">
-        <input type="text" class="input-value-border-radius" />
+        <input
+          type="text"
+          class="input-value-border-radius"
+          maxlength="3"
+          id="border-bottom-right-radius"
+          placeholder="%"
+          onchange="changeBorderRadius()"
+        />
       </div>
     </div>
 
     <div class="code-container">
-      <p class="code-text">CSS:</p>
+      <input class="code-text" readonly></input>
+      <button class="button" onclick="copyText()">Copy</button>
     </div>
   </body>
 
